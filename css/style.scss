@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great|Montserrat:400,700');
-@import url('https://fonts.googleapis.com/css?family=Great+Vibes');
+@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat:400,700');
 @import 'mixins';
 
-$header-font: 'Great Vibes', cursive;
-$body-font: 'Montserrat', sans-serif;
+$header-font: 'Montserrat', sans-serif;
+$body-font: 'Lato', sans-serif;
 $normal: 400;
 $bold: 700;
 $main-header: 3.5em;
@@ -16,9 +15,19 @@ $body-text: 1em;
 $highlight: #478da2; 
 $grey: #8ea1a7;
 $pink: #ce638b;
+$bright-pink: #cc1683;
 $tablet-width: 768px;
 $desktop-width: 1024px;
 
+* {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+    }
 
 .burger-icon {
     font-size:30px;
@@ -38,32 +47,43 @@ $desktop-width: 1024px;
  
   
 
-  li {
-    list-style: none;
+  a {
+   
     padding: 10px 20px;
     transition: 0.3s;
   }
-  li:not(:first-child){
+  a:not(:first-child){
     border-left: 1px solid $grey;
   }
-  li:hover {
+  a:hover {
     background-color: $pink;
     color: white;
     opacity: 0.5;
     
   }
-  ul {
-    padding-left:0px;
-    display: none;
-    position:fixed;
-    @extend %center;
-    @include tablet {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      }
-  }
+  
+  padding-left:0px;
+  display: none;
+
+  @extend %center;
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    }
+  
  
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
 }
 
 /*--------projects----------*/
@@ -131,13 +151,14 @@ body {
 .title {
     font-size: $main-header;
     font-family: $header-font;
-    font-weight: $normal;
-    color: $highlight;
+    font-weight: $bold;
+    text-transform: uppercase;
+    color: $bright-pink;
 }
 .subtitle{
     font-size: $small-header;
     font-weight: $normal;
-    color: $highlight;
+    color: $bright-pink;
 }
 .lead {
   font-size: $bigger-text;
@@ -176,9 +197,13 @@ body {
 
 
 .header-container {
-  margin-top: 40px;
-   @extend %vertical-center;
+  display: flex;
+  justify-content: center;
+  background-color:#f5f5f58a;
+  align-items: center; 
+  height: 100vh;
    @extend %center;
+  opacity: 0.8;
 }
  
 .fade {
@@ -212,12 +237,14 @@ body {
 }
 
 .parallax-img  { 
-  background-image: url('../images/lucy.jpeg');
+  background-image: url("../images/lucy.jpg");
+  
   height: 100%; 
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  
 }
 .parallax-container {
     height: 100vh;
