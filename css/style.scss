@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great|Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes');
+@import 'mixins';
+
+$header-font: 'Great Vibes', cursive;
+$body-font: 'Montserrat', sans-serif;
+$normal: 400;
+$bold: 700;
+$main-header: 3.5em;
+$small-header: 2em;
+$bigger-text: 1.4em;
+$body-text: 1em;
+
+
+/* colours */
+$highlight: #478da2; 
+$grey: #8ea1a7;
+$pink: #ce638b;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+
+.burger-icon {
+    font-size:30px;
+    cursor:pointer;
+    top: 20px;
+    right: 20px;
+    position: absolute;
+    
+      @include tablet {
+        display: none;
+      }
+}
+
+.main-nav {
+  color: $grey;
+  font-size: $body-text;
+ 
+  
+
+  li {
+    list-style: none;
+    padding: 10px 20px;
+    transition: 0.3s;
+  }
+  li:not(:first-child){
+    border-left: 1px solid $grey;
+  }
+  li:hover {
+    background-color: $pink;
+    color: white;
+    opacity: 0.5;
+    
+  }
+  ul {
+    padding-left:0px;
+    display: none;
+    position:fixed;
+    @extend %center;
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      }
+  }
+ 
+}
+
+/*--------projects----------*/
+
+
+
+
+.project {
+  @extend %project;
+}
+
+.p-1 {
+  background-image: url('../images/beerlist_screen.jpeg');
+}
+.p-2 {
+  background-image: url('../images/vanlife.jpeg');
+}
+.p-3 {
+  background-image: url('../images/music.jpeg');
+}
+.p-4 {
+  background-image: url('../images/oomp.jpeg');
+}
+
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; 
+  width: 0; 
+  position: fixed; 
+  z-index: 1; 
+  top: 0; 
+  left: 0;
+  background-color: #111; 
+  overflow-x: hidden; 
+  padding-top: 60px;
+  transition: 0.5s; 
+  a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  a:hover {
+    color: #f1f1f1;
+  }
+  .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+}
+
+/* ------------fonts --------------*/
+
+
+
+body {
+  font-family: $body-font;
+}
+.title {
+    font-size: $main-header;
+    font-family: $header-font;
+    font-weight: $normal;
+    color: $highlight;
+}
+.subtitle{
+    font-size: $small-header;
+    font-weight: $normal;
+    color: $highlight;
+}
+.lead {
+  font-size: $bigger-text;
+  margin-bottom:40px;
+  color: $grey;
+}
+
+.intro-text {
+
+  width: 80%;
+  @extend %center;
+  font-size: $body-text;
+  line-height: 1.5;
+  strong {
+    
+    color: $pink;
+    font-weight: $normal;
+  }
+}
+
+/*-------------containers-----------*/
+ 
+.flex-grid {
+  display: block;
+  @include tablet {
+     display: flex;
+  }
+  
+  justify-content: space-evenly;
+  
+}
+
+.col {
+  flex: 1;
+}
+
+
+.header-container {
+  margin-top: 40px;
+   @extend %vertical-center;
+   @extend %center;
+}
+ 
+.fade {
+  height: 250px;
+  width: 80%;
+  @include tablet{
+    height: 250px;
+    width: 360px;
+  }
+  
+  @include desktop{
+    height: 300px;
+    width: 460px;
+    margin: 20px;
+  }
+  background-color: $grey;
+  margin: 20px auto;
+}
+
+.section {
+    @extend %center;
+    
+  @include desktop{
+    max-width: 80%;
+  
+  }
+  h2 {
+    margin-top: 80px;
+    margin-bottom: 40px;
+  }
+}
+
+.parallax-img  { 
+  background-image: url('../images/lucy.jpeg');
+  height: 100%; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parallax-container {
+    height: 100vh;
+}
