@@ -18,9 +18,10 @@ $(window).on("load",function() {
   $('.header-container').css({
 
     opacity: function() {
-      var elementHeight = $(this).height();
+      var elementHeight = $(this).height()/3;
       return 0 + ((elementHeight - scrollTop) / (elementHeight));
     }
+    
   });
   
 
