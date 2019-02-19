@@ -12,11 +12,14 @@ $body-text: 1em;
 
 
 /* colours */
-$light-grey: #88979e;
+$light-grey: #7b7e80;
 $highlight: #478da2; 
 $grey: #3b3a3c;
-$pink: #ce638b;
-$bright-pink: #cc1683;
+$pink: #E9D7D0;
+
+$bright-pink: #E33761;
+$blue: #3DA1B9;
+$yellow-green: #BDEEE3;
 
 
 * {
@@ -27,17 +30,22 @@ $bright-pink: #cc1683;
         font-size: 100%;
         vertical-align: baseline;
         background: transparent;
+        text-decoration: none;
+        
     }
 body {
   background-color: $grey;
-}    
+}   
 
-.burger-icon {
-    font-size:30px;
+
+#nav-icon {
+    font-size:38px;
     cursor:pointer;
     top: 20px;
-    right: 20px;
-    position: absolute;
+    left: 20px;
+    position: fixed;
+    color: #7b7e80;
+    z-index: 2;
     
       @include tablet {
         display: none;
@@ -46,9 +54,9 @@ body {
 
 .main-nav {
   
-  font-size: $bigger-text;
+  font-size: $body-text;
   background-color:#474548e8;
-  
+  z-index: 5;
   text-transform: uppercase;
   
   
@@ -91,31 +99,57 @@ body {
 }
 
 /*--------projects----------*/
-
+.p-container {
+  color: $grey;
+}
 
  .project{
     @extend %section;
     @extend %center;
-    
+    h2 {
+      @include tablet {
+      font-size: $small-header;
+    }
+      font-size: 1.3em;
+      font-weight: $bold;
+      color: $grey;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+  hr {
+    width: 100px;
+    height: 6px;
+    background-color: $grey;
+    margin: 20px auto 0px auto;
+  }  
    
  }
  
  .img-container {
    @extend %center;
+   max-width: 100%;
  }
+ 
 
 .project-img {
-  height: 300px;
+  height: 200px;
   @include tablet {
-    height: 484px;
+    height: 400px;
   }
   
   background-color: $grey;
   margin: 0px auto;
+  max-width: 100%;
   
 }
 
+
+
 .project-btn {
+  display: block;
+  @include tablet {
+    display: inline-block;
+  }
   padding: 5px 10px;
   color: white;
   background-color: $light-grey;
@@ -159,7 +193,7 @@ body {
   height: 100%; 
   width: 0; 
   position: fixed; 
-  z-index: 1; 
+  z-index: 5; 
   top: 0; 
   left: 0;
    background-color:#39373a;
@@ -170,7 +204,7 @@ body {
   a{
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 18px;
     color: #818181;
     display: block;
     transition: 0.3s;
@@ -187,6 +221,28 @@ body {
   }
 }
 
+.chev {
+  @extend %center;
+  animation: pulse 1.5s infinite ease-in-out;
+  display: block;
+  
+  font-size: 24px;
+  text-decoration: none;
+  :active {
+    text-decoration: none;
+  }
+  transform: translateY(50px)
+}
+
+@keyframes pulse {
+  from {
+    color: $pink;
+  }
+  to {
+    color: $bright-pink;
+  }
+}
+
 /* ------------fonts --------------*/
 
 
@@ -195,14 +251,20 @@ body {
   font-family: $body-font;
 }
 .title {
-    font-size: $main-header;
+    @include tablet {
+      font-size: $main-header;
+    }
+    font-size: $small-header;
     font-family: $header-font;
     font-weight: $bold;
     text-transform: uppercase;
     color: $bright-pink;
 }
 .subtitle{
-  font-size: $small-header;
+  @include tablet {
+      font-size: $small-header;
+    }
+  font-size: $bigger-text;
   font-weight: $bold;
   color: $bright-pink;
   margin-bottom: 20px;
@@ -210,7 +272,10 @@ body {
 }
 
 .section-title{
-  font-size: $small-header;
+  @include tablet {
+      font-size: $small-header;
+    }
+  font-size: $bigger-text;
   font-weight: $bold;
   color: white;
   margin-bottom: 20px;
@@ -218,7 +283,10 @@ body {
 }
 
 .section-subtitle{
-  font-size: $bigger-text;
+  @include tablet {
+      font-size: $bigger-text;
+    }
+  font-size: 1.3em;
   font-weight: $bold;
   
 }
@@ -239,16 +307,22 @@ body {
 }
 
 .lead {
-  font-size: $bigger-text;
+  @include tablet {
+      font-size: $bigger-text;
+    }
+  font-size: 1.3em;
   margin-bottom:40px;
   color: $bright-pink;
 }
 
 .intro-text {
+  @include tablet {
+      font-size: $bigger-text;
+    }
 
   width: 80%;
   @extend %center;
-  font-size: $bigger-text;
+  font-size: 1.3em;
   line-height: 1.5;
   margin-bottom: 20px;
   strong {
@@ -260,14 +334,16 @@ body {
 .skills {
   list-style: none;
   display: inline-flex;
+  justify-content: center;
+  flex-wrap: wrap;
   li {
-    color: silver;
+    color: $grey;
     text-transform: uppercase;
     font-size: $body-text;
-    padding: 8px;
-    border: 1px solid silver;
-    border-radius: 10px;
-    margin: 20px;
+    padding: 6px;
+    border: 1px solid $grey;
+    border-radius: 6px;
+    margin: 10px;
   }
 }
 
@@ -276,7 +352,7 @@ body {
   display: inline-flex;
   li {
     color: $bright-pink;
-    font-size: 36px;
+    font-size: 24px;
     padding: 10px;
   }
 }
@@ -307,24 +383,21 @@ body {
   padding: 10px 20px;
   border: 1px solid $bright-pink;
   color: $bright-pink;
-  font-size: $bigger-text;
+  @include tablet {
+      font-size: $bigger-text;
+    }
+  font-size: 1.1em;
   text-transform: uppercase;
   border-radius: 10px;
   margin-top: 30px;
-  transition: all 0.5s ease-in-out;
-  i {
-    transition: all 0.5s ease-in-out;
-  }
+  transition: all 0.3s ease-in-out;
+  
 }
 
 .contact-btn:hover {
   
-  color: white;
-  background-color: $bright-pink;
+  opacity: 0.4;
   cursor: pointer;
-  i {
-    color: white;
-  }
 }
 
 
@@ -335,6 +408,10 @@ body {
    @extend %center;
    padding-top: 60px;
    
+ }
+ 
+ .skill-section {
+   background-color: $blue;
  }
  
  .row {
@@ -360,8 +437,38 @@ body {
 }
 
 
+.game {
  
+  margin-bottom:40px;
+}
 
+
+
+.van-pic {
+  margin-bottom:20px;
+}
+
+.oomp {
+  background-color: #cc8e9d;
+  img {
+    
+    background-color:#cc8e9d;
+  }
+}
+.van {
+  background-color: $yellow-green;
+  color: $grey;
+}
+.music {
+  background-color:#ffca08fa;
+  img {
+    margin-bottom: 20px;
+    background-color:#ffca08fa;
+  }
+}
+.beer {
+  background-color: #3da1b9;
+}
 
 .header-container {
   display: flex;
@@ -396,4 +503,9 @@ body {
 }
 .parallax-container {
     height: 100vh;
+}
+
+#pieChart {
+  max-width: 200px;
+  
 }
