@@ -378,10 +378,12 @@ body {
 .parallax-img {
   background-image: url("../images/lucy.jpg");
   height: 100%;
-  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
+  @media (min-width: 768px) {
+    .parallax-img {
+      background-attachment: fixed; } }
 
 .parallax-container {
   height: 100vh; }
@@ -500,7 +502,7 @@ body {
     .port-btn {
       font-size: 1.4em; } }
 
-.mb-40 {
+.mb {
   margin-bottom: 40px; }
 
 .port-btn:hover {

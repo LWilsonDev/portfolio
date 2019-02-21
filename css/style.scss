@@ -501,7 +501,10 @@ body {
   background-image: url("../images/lucy.jpg");
   
   height: 100%; 
-  background-attachment: fixed;
+  @include tablet {
+    background-attachment: fixed;
+  }
+  
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -642,7 +645,7 @@ body {
   margin: 40px auto;
   transition: all 0.3s ease-in-out;
 }
-.mb-40 {
+.mb {
   margin-bottom:40px;
 }
 .port-btn:hover {
