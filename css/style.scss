@@ -390,6 +390,7 @@ body {
 
 
 .contact-btn {
+  letter-spacing: 4px;
   padding: 10px 20px;
   border: 1px solid $bright-pink;
   color: $bright-pink;
@@ -627,9 +628,31 @@ body {
  
 }
 
-
+.port-btn {
+  letter-spacing: 4px;
+  padding: 10px 20px;
+  border: 1px solid #3da1b9;
+  color: #3da1b9;
+  @include tablet {
+      font-size: $bigger-text;
+    }
+  font-size: 1.1em;
+  text-transform: uppercase;
+  border-radius: 10px;
+  margin: 40px auto;
+  transition: all 0.3s ease-in-out;
+}
+.mb-40 {
+  margin-bottom:40px;
+}
+.port-btn:hover {
+  background-color: #3da1b9;
+  color:white;
+  cursor: pointer;
+}
 .contact-page-btn {
   padding: 10px 20px;
+  letter-spacing: 4px;
   border: 1px solid #3da1b9;
   color: #3da1b9;
   @include tablet {
