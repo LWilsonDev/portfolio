@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <title>Lucy Wilson</title>
+</head>
+
+<body>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="slideIn()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <span class='burger-icon' id='nav-icon' onclick="slideOut()">&#9776;</span>
+    <div id="navbar" class='main-nav'>
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html">Contact</a>
+    </div>
+<main>
+    <div id="portfolio" class="p-container beer">
+
+      <div class='project fade '>
+        <h2>Selected Projects</h2>
+        <hr>
+        <div class='img-container'>
+          <a href="https://the-beer-list-app.herokuapp.com/" target="_blank"><img class="project-img beer beer-img" src="images/beer.png"></img></a>
+        </div>
+        <div class='section-text'>
+          <h3 class='section-subtitle'>The Beer List</h3>
+          <p class='body-text'>This is a Django app where users can log in securely, keep track of their favourite beers, and browse other user's profiles for inspiration. With the growing trend for craft beer and independent breweries, I wanted to create an app where users
+            can review the beers they have tried, and keep track of their favourites.
+          </p>
+          <div>
+            <a href="https://github.com/LWilsonDev/beer-list" target="_blank" class='project-btn'>View Code<i class="fab fa-github"></i></a>
+            <a href="https://the-beer-list-app.herokuapp.com/" target="_blank" class='project-btn'>View Demo<i class="fas fa-laptop"></i></a>
+          </div>
+          <ul class='skills'>
+            <li>Python</li>
+            <li>Django</li>
+            <li>PostgreSQL</li>
+            <li>AWS</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="p-container van">
+      <div class='project fade '>
+        <div class='img-container van-pic'>
+          <a href="http://vanlife-recipes.herokuapp.com/" target="_blank"><img class="project-img" src="images/van.png"></img></a>
+        </div>
+        <div class='section-text'>
+          <h3 class='section-subtitle'>Vanlife Recipe App</h3>
+          <p class='body-text'>A wanderlust themed recipe app, where users can login/register, add recipes, and view recipes by category and author. Built using Python, Flask, MongoDB, and automated Unittests.</p>
+          <div>
+            <a href="https://github.com/LWilsonDev/recipe-book" target="_blank" class='project-btn'>View Code<i class="fab fa-github"></i></a>
+            <a href="http://vanlife-recipes.herokuapp.com/" target="_blank" class='project-btn'>View Demo<i class="fas fa-laptop"></i></a>
+          </div>
+          <ul class='skills'>
+            <li>Python</li>
+            <li>Flask</li>
+            <li>MongoDB</li>
+            <li>JQuery</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="p-container music">
+      <div class='project fade '>
+        <div class='img-container'>
+          <a href="https://lwilsondev.github.io/music-memory-game/" target="_blank"><img class="project-img music" src="images/music.png"></img></a>
+        </div>
+        <div class='section-text'>
+          <h3 class='section-subtitle'>Music Memory JS Game</h3>
+          <p class='body-text'>A memory game to help children learn to differentiate between musical pitches. The game is built using JavaScript/JQuery. The user flips 2 tiles and listens to the corresponding notes to match pairs. There are 2 levels - the harder level removes
+            the colours and users have to just use their ears to find the matching notes!
+          </p>
+          <div>
+            <a href="https://github.com/LWilsonDev/music-memory-game" target="_blank" class='project-btn'>View Code<i class="fab fa-github"></i></a>
+            <a href="https://lwilsondev.github.io/music-memory-game/" target="_blank" class='project-btn'>Play!<i class="fas fa-laptop"></i></a>
+          </div>
+          <ul class='skills'>
+            <li>JQuery</li>
+            <li>SCSS</li>
+            <li>Javascript</li>
+            <li>Flexbox</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="p-container oomp">
+      <div class='project fade '>
+        <div class='img-container'>
+          <a href="http://oompahbrass.com" target="_blank"><img class="project-img oomp oomp-img" src="images/oomp.png"></img></a>
+        </div>
+        <div class='section-text'>
+          <h3 class='section-subtitle'>Website for a band</h3>
+          <p class='body-text'>I was asked to create a website for my band - Oompah Brass. The site needed to showcase the band's music and also establish their brand. Multiple pages were used to demonstrate the band's various roles, from educators to headline act. I took
+            a mobile-first approach to ensure good UX across all devices. The site is up and running and saw 40,000 visitors in it's first year.</p>
+          <div>
+            <a href="https://github.com/LWilsonDev/band_website" target="_blank" class='project-btn'>View Code<i class="fab fa-github"></i></a>
+            <a href="http://oompahbrass.com" target="_blank" class='project-btn'>View Site<i class="fas fa-laptop"></i></a>
+          </div>
+          <ul class='skills'>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Bootstrap</li>
+            <li>UX</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+  </main>
+  
+<footer>
+    <div class='footer'>
+      <div class='footer-top'></div>
+      <ul class='icon-list'>
+        <li><a href="https://www.linkedin.com/in/lucy-wilson-289437158/"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="https://github.com/LWilsonDev"><i class="fab fa-github"></i></a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i></a></li>
+      </ul>
+    </div>
+  </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>

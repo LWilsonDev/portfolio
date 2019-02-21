@@ -205,12 +205,12 @@ body {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 18px;
-    color: #818181;
+    color: white;
     display: block;
     transition: 0.3s;
   }
   a:hover {
-    color: #f1f1f1;
+    color: $light-grey;
   }
   .closebtn {
     position: absolute;
@@ -316,6 +316,7 @@ body {
 }
 
 .intro-text {
+  color: white;
   @include tablet {
       font-size: $bigger-text;
     }
@@ -350,11 +351,22 @@ body {
 .icon-list {
   list-style: none;
   display: inline-flex;
+  margin-top: 20px;
   li {
-    color: $bright-pink;
-    font-size: 24px;
-    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
+   a {
+    color: $bright-pink;
+    font-size: 2em;
+    
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+.icon-list a:hover {
+  cursor: pointer;
+  opacity: 0.5;
 }
 .mini-icon {
   color: $bright-pink;
@@ -407,12 +419,10 @@ body {
    @extend %section;
    @extend %center;
    padding-top: 60px;
+   min-height: 90vh;
    
  }
  
- .skill-section {
-   background-color: $blue;
- }
  
  .row {
   display: flex;
@@ -449,10 +459,10 @@ body {
 }
 
 .oomp {
-  background-color: #cc8e9d;
+  background-color:#3da1b9;
   img {
     
-    background-color:#cc8e9d;
+    background-color:#3da1b9;
   }
 }
 .van {
@@ -460,10 +470,10 @@ body {
   color: $grey;
 }
 .music {
-  background-color:#ffca08fa;
+  background-color:#78cdd6;
   img {
     margin-bottom: 20px;
-    background-color:#ffca08fa;
+    background-color:#78cdd6;
   }
 }
 .beer {
@@ -488,9 +498,6 @@ body {
   
 }
 
-
-
-
 .parallax-img  { 
   background-image: url("../images/lucy.jpg");
   
@@ -505,7 +512,173 @@ body {
     height: 100vh;
 }
 
-#pieChart {
-  max-width: 200px;
+.footer {
+  height: 120px;
+  text-align: center;
+  background-color: #474548;
+}
+.footer-top {
+  height: 20px;
+  position: relative;
+  background-color: #7b7e802e;
+}
+
+@mixin stagger-anim-delay($i, $initial-delay, $stagger-delay) {
+  @while $i > 0 {
+    &:nth-of-type(#{$i}) {
+      animation-delay: $initial-delay + $stagger-delay * $i;
+    }
+    $i: $i - 1;
+  }
+}
+
+
+//Demo https://speckyboy.com/code-snippets-css3-bar-graphs/
+.skills-div {
+  width: 80%;
+  max-width: 960px;
+  min-height: 90vh;
+  margin: auto;
+  position: relative;
+}
+
+.charts {
+  margin-top: 40px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.chart {
+  margin: 30px 0 0;
+
+  &:first-child {
+    margin: 0;
+  }
+}
+
+
+
+.chart--horiz {
+  overflow: hidden;
+}
+
+.chart__bar {
+  $border-rad: 4px;
+  height: 30px;
+  margin-bottom: 10px;
+  background: linear-gradient(to left, #4cb8c4, #3cd3ad);
+  border-top-right-radius: $border-rad;
+  border-bottom-right-radius: $border-rad;
+  opacity: 0;
+
+  animation: 1s anim-lightspeed-in ease forwards;
+
+  .chart--dev & {
+    @include stagger-anim-delay(11, 0.5s, 0.2s);
+  }
   
+}
+
+.chart__label {
+  padding-left: 10px;
+  line-height: 30px;
+  color: white;
+  font-size: 10px;
+  @include tablet {
+    font-size: $body-text;
+  }
+}
+
+//Keyframes
+@keyframes anim-lightspeed-in {
+  0% {
+    transform: translateX(-200%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.contact-form {
+  
+  width: 80%;
+  margin: 60px auto;
+  background-color: white;
+  color: $grey;
+  padding: 20px;
+  border-radius: 7px;
+  input {
+    width: 80%;
+    padding: 10px;
+    margin-top: 20px;
+    border-bottom: solid 1px $light-grey;
+  }
+  textarea {
+    padding: 10px 10px 40px 10px;
+    width: 80%;
+    border: 1px solid $light-grey;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+ 
+}
+
+
+.contact-page-btn {
+  padding: 10px 20px;
+  border: 1px solid #3da1b9;
+  color: #3da1b9;
+  @include tablet {
+      font-size: $bigger-text;
+    }
+  font-size: 1.1em;
+  text-transform: uppercase;
+  border-radius: 10px;
+  margin: 30px auto;
+  transition: all 0.3s ease-in-out;
+  
+}
+
+.contact-page-btn:hover {
+  background-color: #3da1b9;
+  color:white;
+  cursor: pointer;
+}
+.message {
+  display: none;
+}
+.error-message {
+  display: none;
+}
+
+.success-text {
+  color: white;
+  font-size: $body-text;
+  padding: 10px;
+}
+.display {
+  display:inline-block;
+  max-width: 80%;
+  background-color: #3da1b9;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px auto;
+}
+.display-error {
+  display:inline-block;
+  max-width: 80%;
+  background-color: $bright-pink;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px auto;
+}
+
+.disabled {
+  opacity: 0.6;
 }
