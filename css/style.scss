@@ -113,6 +113,7 @@ body {
       font-size: 1.3em;
       font-weight: $bold;
       color: $grey;
+      margin-top: 60px;
       margin-bottom: 20px;
       text-transform: uppercase;
     }
@@ -279,6 +280,7 @@ body {
   font-weight: $bold;
   color: white;
   margin-bottom: 20px;
+  margin-top: 60px;
   text-transform: uppercase;
 }
 
@@ -300,10 +302,6 @@ body {
   line-height: 1.5;
   
 
-}
-.section-text {
- 
-    
 }
 
 .lead {
@@ -419,7 +417,7 @@ body {
    @extend %section;
    @extend %center;
    padding-top: 60px;
-   min-height: 90vh;
+   min-height: 85vh;
    
  }
  
