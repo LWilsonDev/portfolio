@@ -164,15 +164,9 @@ body {
 }
 
 .project-btn:hover {
-  
   background-color: #595c5d;
   cursor: pointer;
-
 }
-
-  
-
-
 
 .p-1 {
   background-image: url('../images/oomp12.jpeg');
@@ -246,7 +240,6 @@ body {
 /* ------------fonts --------------*/
 
 
-
 body {
   font-family: $body-font;
 }
@@ -260,6 +253,7 @@ body {
     text-transform: uppercase;
     color: $bright-pink;
 }
+
 .subtitle{
   @include tablet {
       font-size: $small-header;
@@ -291,16 +285,16 @@ body {
   font-weight: $bold;
   
 }
+
 .white {
   color: white;
 }
+
 .body-text {
   font-size: $body-text;
   margin-top: 20px;
   margin-bottom: 20px;
   line-height: 1.5;
-  
-
 }
 
 .lead {
@@ -329,6 +323,7 @@ body {
     font-weight: $normal;
   }
 }
+
 .skills {
   list-style: none;
   display: inline-flex;
@@ -365,6 +360,7 @@ body {
   cursor: pointer;
   opacity: 0.5;
 }
+
 .mini-icon {
   color: $bright-pink;
     font-size: 24px;
@@ -378,15 +374,13 @@ body {
   background-color: $bright-pink;
   margin: 30px auto 40px auto;
 }
+
 .small-hr {
   width: 100px;
   height: 6px;
   background-color: white;
   margin: 20px auto 40px auto;
-  
 }
-
-
 
 .contact-btn {
   letter-spacing: 4px;
@@ -401,11 +395,9 @@ body {
   border-radius: 10px;
   margin-top: 30px;
   transition: all 0.3s ease-in-out;
-  
 }
 
 .contact-btn:hover {
-  
   opacity: 0.4;
   cursor: pointer;
 }
@@ -418,9 +410,7 @@ body {
    @extend %center;
    padding-top: 60px;
    min-height: 85vh;
-   
  }
- 
  
  .row {
   display: flex;
@@ -428,6 +418,7 @@ body {
   flex-wrap: wrap;
   width: 100%;
 }
+
 .double-column {
   display: flex;
   flex-direction: column;
@@ -435,8 +426,8 @@ body {
   @include tablet {
     flex: 2
   }
-  
 }
+
 .column {
   display: flex;
   flex-direction: column;
@@ -444,13 +435,9 @@ body {
   flex: 1
 }
 
-
 .game {
- 
   margin-bottom:40px;
 }
-
-
 
 .van-pic {
   margin-bottom:20px;
@@ -463,10 +450,12 @@ body {
     background-color:#3da1b9;
   }
 }
+
 .van {
   background-color: $yellow-green;
   color: $grey;
 }
+
 .music {
   background-color:#78cdd6;
   img {
@@ -474,6 +463,7 @@ body {
     background-color:#78cdd6;
   }
 }
+
 .beer {
   background-color: #3da1b9;
 }
@@ -488,27 +478,22 @@ body {
   opacity: 0.8;
 }
  
-
-
 .background {
   background-color:$grey;
   color: white;
-  
 }
 
 .parallax-img  { 
   background-image: url("../images/lucy.jpg");
-  
   height: 100%; 
   @include tablet {
     background-attachment: fixed;
   }
-  
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  
 }
+
 .parallax-container {
     height: 100vh;
 }
@@ -518,6 +503,7 @@ body {
   text-align: center;
   background-color: #474548;
 }
+
 .footer-top {
   height: 20px;
   position: relative;
@@ -532,7 +518,6 @@ body {
     $i: $i - 1;
   }
 }
-
 
 //Demo https://speckyboy.com/code-snippets-css3-bar-graphs/
 .skills-div {
@@ -555,13 +540,10 @@ body {
 
 .chart {
   margin: 30px 0 0;
-
   &:first-child {
     margin: 0;
   }
 }
-
-
 
 .chart--horiz {
   overflow: hidden;
@@ -575,13 +557,10 @@ body {
   border-top-right-radius: $border-rad;
   border-bottom-right-radius: $border-rad;
   opacity: 0;
-
   animation: 1s anim-lightspeed-in ease forwards;
-
   .chart--dev & {
     @include stagger-anim-delay(11, 0.5s, 0.2s);
   }
-  
 }
 
 .chart__label {
@@ -607,7 +586,6 @@ body {
 }
 
 .contact-form {
-  
   width: 80%;
   margin: 60px auto;
   background-color: white;
@@ -627,7 +605,6 @@ body {
     border-radius: 10px;
     margin-top: 20px;
   }
- 
 }
 
 .port-btn {
@@ -645,14 +622,17 @@ body {
   margin: 40px auto;
   transition: all 0.3s ease-in-out;
 }
+
 .mb {
   margin-bottom:40px;
 }
+
 .port-btn:hover {
   background-color: #3da1b9;
   color:white;
   cursor: pointer;
 }
+
 .contact-page-btn {
   padding: 10px 20px;
   letter-spacing: 4px;
@@ -666,7 +646,6 @@ body {
   border-radius: 10px;
   margin: 30px auto;
   transition: all 0.3s ease-in-out;
-  
 }
 
 .contact-page-btn:hover {
@@ -674,9 +653,11 @@ body {
   color:white;
   cursor: pointer;
 }
+
 .message {
   display: none;
 }
+
 .error-message {
   display: none;
 }
@@ -686,6 +667,7 @@ body {
   font-size: $body-text;
   padding: 10px;
 }
+
 .display {
   display:inline-block;
   max-width: 80%;
@@ -694,6 +676,7 @@ body {
   padding: 10px;
   margin: 20px auto;
 }
+
 .display-error {
   display:inline-block;
   max-width: 80%;
