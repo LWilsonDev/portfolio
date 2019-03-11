@@ -446,7 +446,7 @@ body {
 .oomp {
   background-color:#3da1b9;
   img {
-    
+    margin-bottom: 20px;
     background-color:#3da1b9;
   }
 }
@@ -454,6 +454,18 @@ body {
 .van {
   background-color: $yellow-green;
   color: $grey;
+}
+
+.space {
+  background-color: $yellow-green;
+  color: $grey;
+  img {
+    height: 300px;
+    background-color: $yellow-green;
+    @include tablet {
+      height: 500px;
+    }
+  }
 }
 
 .music {
