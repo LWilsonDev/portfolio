@@ -251,7 +251,7 @@ body {
     font-family: $header-font;
     font-weight: $bold;
     text-transform: uppercase;
-    color: $bright-pink;
+    color: $grey;
 }
 
 .subtitle{
@@ -284,6 +284,12 @@ body {
   font-size: 1.3em;
   font-weight: $bold;
   
+}
+.footer-text{
+  font-size:14px;
+  color:$bright-pink;
+  margin-top:20px;
+  padding-bottom:20px;
 }
 
 .white {
@@ -323,7 +329,12 @@ body {
     font-weight: $normal;
   }
 }
-
+.link-text{
+  color: #0781ea;
+}
+.link-text:hover{
+  color: $bright-pink;
+}
 .skills {
   list-style: none;
   display: inline-flex;
@@ -398,7 +409,8 @@ body {
 }
 
 .contact-btn:hover {
-  opacity: 0.4;
+  color:white;
+  background-color:$bright-pink;
   cursor: pointer;
 }
 
@@ -457,11 +469,11 @@ body {
 }
 
 .space {
-  background-color: $yellow-green;
+  background-color: #78cdd6;
   color: $grey;
   img {
     height: 300px;
-    background-color: $yellow-green;
+    background-color: #78cdd6;
     @include tablet {
       height: 500px;
     }
@@ -483,7 +495,7 @@ body {
 .header-container {
   display: flex;
   justify-content: center;
-  background-color:#f5f5f58a;
+  background-color:#f5f5f594;
   align-items: center; 
   height: 100vh;
    @extend %center;
@@ -496,7 +508,7 @@ body {
 }
 
 .parallax-img  { 
-  background-image: url("../images/lucy.jpg");
+  background-image: url("../images/wall.jpg");
   height: 100%; 
   @include tablet {
     background-attachment: fixed;
@@ -511,7 +523,7 @@ body {
 }
 
 .footer {
-  height: 120px;
+  height: 130px;
   text-align: center;
   background-color: #474548;
 }
