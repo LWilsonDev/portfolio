@@ -481,10 +481,10 @@ body {
 }
 
 .music {
-  background-color:#78cdd6;
+  background-color:#f9ff98;
   img {
     margin-bottom: 20px;
-    background-color:#78cdd6;
+    background-color:#f9ff98;
   }
 }
 
@@ -508,10 +508,11 @@ body {
 }
 
 .parallax-img  { 
-  background-image: url("../images/wall.jpg");
+  background-image: url("../images/wall-sm.jpg");
   height: 100%; 
   @include tablet {
     background-attachment: fixed;
+     background-image: url("../images/wall-lg.jpg");
   }
   background-position: center;
   background-repeat: no-repeat;

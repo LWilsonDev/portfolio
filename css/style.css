@@ -476,11 +476,11 @@ body {
 }
 
 .music {
-  background-color: #78cdd6;
+  background-color: #f9ff98;
 }
 .music img {
   margin-bottom: 20px;
-  background-color: #78cdd6;
+  background-color: #f9ff98;
 }
 
 .beer {
@@ -502,7 +502,7 @@ body {
 }
 
 .parallax-img {
-  background-image: url("../images/wall.jpg");
+  background-image: url("../images/wall-sm.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -511,6 +511,7 @@ body {
 @media (min-width: 768px) {
   .parallax-img {
     background-attachment: fixed;
+    background-image: url("../images/wall-lg.jpg");
   }
 }
 
