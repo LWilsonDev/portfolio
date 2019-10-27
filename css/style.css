@@ -511,6 +511,11 @@ body {
 @media (min-width: 768px) {
   .parallax-img {
     background-attachment: fixed;
+  }
+}
+@media (min-width: 1024px) {
+  .parallax-img {
+    background-attachment: fixed;
     background-image: url("../images/wall-lg.jpg");
   }
 }
