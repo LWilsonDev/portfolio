@@ -1,84 +1,56 @@
-function slideIn() {
-  var elem = document.getElementById('mySidenav');
-  elem.style.transition = "all 1s ease-in-out";
-  elem.style.width = "0px";
-  
-}
-function slideOut() {
-  var elem = document.getElementById('mySidenav');
-  elem.style.transition = "all 1s ease-in-out";
-  elem.style.width = "250px";
-}
+
+/*
+Code Acknowlegments:
+Many thanks to these generous developers who provide inspiration and knowledge!
+
+- Vanga bird animation (https://www.vantajs.com/)
+- Sticky Nav (https://codepen.io/aklima/pen/oeyjLd)
+- Fade In Animation Library (https://michalsnik.github.io/aos/)
+- Panel colour change on scroll (https://codepen.io/daveredfern/pen/zBGBJV)
+
+*/
+$(document).ready(function() {
+    console.log( "ready!" );
+
+
+
+// Sticky navbar code found
+// =========================
+            
+                // Custom function which toggles between sticky class (is-sticky)
+                var stickyToggle = function (sticky, stickyWrapper, scrollElement) {
+                    var stickyHeight = sticky.outerHeight();
+                    var stickyTop = stickyWrapper.offset().top;
+                    if (scrollElement.scrollTop() >= stickyTop) {
+                        stickyWrapper.height(stickyHeight);
+                        sticky.addClass("is-sticky");
+                    }
+                    else {
+                        sticky.removeClass("is-sticky");
+                        stickyWrapper.height('auto');
+                    }
+                };
+
+                // Find all data-toggle="sticky-onscroll" elements
+                $('[data-toggle="sticky-onscroll"]').each(function () {
+                    var sticky = $(this);
+                    var stickyWrapper = $('<div>').addClass('sticky-wrapper'); // insert hidden element to maintain actual top offset on page
+                    sticky.before(stickyWrapper);
+                    sticky.addClass('sticky');
+
+                    // Scroll & resize events
+                    $(window).on('scroll.sticky-onscroll resize.sticky-onscroll', function () {
+                        stickyToggle(sticky, stickyWrapper, $(this));
+                    });
+
+                    // On page load
+                    stickyToggle(sticky, stickyWrapper, $(window));
+                });
 
  
 
-$(window).on("load",function() {
-  
-  
-  //https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_animate_smoothscroll
-    // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
-
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
+ //end panel code
 
   
-  $(window).scroll(function() {
-    myFunction();
-   
-    var scroll = $(window).scrollTop();
 
-      $('.header-container').css({
-        opacity: function() {
-          var elementHeight = $(this).height()/3;
-          return 0 + ((elementHeight - scroll) / (elementHeight));
-        }
-      });
-  
-  
-   
-
-   
-  }).scroll(); //invoke scroll-handler on page-load
 });
-
-
-
-
-// When the user scrolls the page, execute myFunction 
-
-
-// Get the navbar
-var navbar = document.getElementById("navbar");
-
-// Get the offset position of the navbar
-var sticky = navbar.offsetTop;
-
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky");
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
-
-
-

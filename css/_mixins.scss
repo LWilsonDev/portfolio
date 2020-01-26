@@ -26,21 +26,22 @@ $desktop-width: 1024px;
   justify-content: center;
 }
 
+@mixin fade-in($delay, $duration) {
+  animation-delay:$delay;
+  animation-duration: $duration; 
+  -webkit-animation-duration: $duration;         
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: fadeIn;
+}
 
 
-%section {
-  
-  padding-top: 40px;
-  padding-bottom: 40px;
-  max-width: 90%;
-  @include tablet{
-    max-width: 80%;
-  }
-  
- 
-  
-  h2 {
-    margin-top: 40px;
-    margin-bottom: 40px;
+@mixin stagger-anim-delay($i, $initial-delay, $stagger-delay) {
+  @while $i > 0 {
+    &:nth-of-type(#{$i}) {
+      animation-delay: $initial-delay + $stagger-delay * $i;
+    }
+    $i: $i - 1;
   }
 }
+
