@@ -1,14 +1,20 @@
-@import url("https://fonts.googleapis.com/css?family=Nanum+Gothic|Nanum+Myeongjo&display=swap");
-.img-container, .scroll, .chev, .text-container {
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,300;0,400;1,400&display=swap");
+.text-container, .chev, .scroll, .img-container {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
 }
 
 .myCanvas {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .myCanvas {
@@ -19,7 +25,7 @@
 }
 
 body {
-  background-color: #152e3c;
+  background-color: #091a31;
 }
 
 .body-text {
@@ -36,66 +42,95 @@ ul.chart--horiz {
 }
 
 .intro-title {
-  font-size: 4em;
+  font-size: 2em;
   letter-spacing: 2px;
-  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
   animation-duration: 5s;
   -webkit-animation-duration: 5s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  animation-name: fadeIn;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+}
+
+@media (min-width: 1024px) {
+  .intro-title {
+    font-size: 3em;
+  }
 }
 
 .intro-subtitle {
-  font-size: 2.5em;
+  font-size: 1.2em;
   letter-spacing: 1.5px;
-  animation-delay: 2s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
   animation-duration: 5s;
   -webkit-animation-duration: 5s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  animation-name: fadeIn;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+}
+
+@media (min-width: 1024px) {
+  .intro-subtitle {
+    font-size: 2em;
+  }
 }
 
 .intro-hr {
   margin: 20px auto;
-  animation-delay: 1.5s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
   animation-duration: 5s;
   -webkit-animation-duration: 5s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  animation-name: fadeIn;
-  width: 300px;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  width: 200px;
   height: 2px;
   background-color: white;
+}
+
+@media (min-width: 1024px) {
+  .intro-hr {
+    width: 300px;
+  }
 }
 
 .section-hr {
   width: 200px;
   height: 2px;
-  background-color: #E33761;
+  background-color: #bb3fff;
   margin: 40px auto;
 }
 
 .text-container {
-  font-family: "Nanum Myeongjo", serif;
+  font-family: "Noto Sans Display", sans-serif;
   color: #c9dae2;
   z-index: 5;
 }
 
 .chev {
-  animation: pulse 1.5s infinite ease-in-out;
-  animation-delay: 3s;
+  -webkit-animation: pulse 1.5s infinite ease-in-out;
+          animation: pulse 1.5s infinite ease-in-out;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
   display: block;
   font-size: 24px;
   text-decoration: none;
-  transform: translateY(50px);
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
   position: relative;
   bottom: 30px;
 }
+
 .chev :active {
   text-decoration: none;
 }
+
 .chev :hover {
   text-decoration: none;
 }
@@ -103,23 +138,27 @@ ul.chart--horiz {
 .chevron:hover {
   text-decoration: none;
 }
+
 .chevron:hover :active {
   text-decoration: none;
 }
 
 .scroll {
-  animation-delay: 3s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
   animation-duration: 3s;
   -webkit-animation-duration: 3s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  animation-name: fadeIn, pulse;
+  -webkit-animation-name: fadeIn, pulse;
+          animation-name: fadeIn, pulse;
   position: absolute;
   bottom: 60px;
 }
+
 .scroll p {
   color: #c9dae2;
-  font-family: "Nanum Myeongjo", serif;
+  font-family: "Noto Sans Display", sans-serif;
 }
 
 /*sticky header position*/
@@ -131,9 +170,9 @@ ul.chart--horiz {
 }
 
 .myNav {
-  background-color: #162f3ced;
+  background-color: #091a31;
   color: #c9dae2;
-  font-family: "Nanum Myeongjo", serif;
+  font-family: "Noto Sans Display", sans-serif;
   font-size: 20px;
   width: 100%;
 }
@@ -145,7 +184,8 @@ ul.chart--horiz {
 /* Setting fade transition and default settings */
 body {
   color: #c9dae2;
-  background-color: #152e3c;
+  background-color: #091a31;
+  -webkit-transition: background-color 1s ease;
   transition: background-color 1s ease;
 }
 
@@ -158,6 +198,7 @@ body {
   margin: 0px auto;
   max-width: 100%;
 }
+
 @media (min-width: 768px) {
   .project-img {
     height: 400px;
@@ -171,15 +212,17 @@ ul.skills {
 .section {
   color: #c9dae2;
   text-align: center;
-  font-family: "Nanum Myeongjo", serif;
+  font-family: "Noto Sans Display", sans-serif;
   width: 90%;
   margin: 80px auto;
 }
+
 @media (min-width: 768px) {
   .section {
     width: 80%;
   }
 }
+
 @media (min-width: 1024px) {
   .section {
     width: 70%;
@@ -195,23 +238,32 @@ ul.skills {
   text-transform: uppercase;
   border-radius: 5px;
   margin: 10px 20px 20px 20px;
+  -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
+
 @media (min-width: 768px) {
   .project-btn {
     display: inline-block;
   }
 }
+
 .project-btn i {
   padding-left: 5px;
 }
 
 .skills {
   list-style: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
+
 .skills li {
   color: #c9dae2;
   font-size: 20px;
@@ -254,7 +306,7 @@ ul.skills {
 .display-error {
   display: inline-block;
   max-width: 90%;
-  border: 2px solid #E33761;
+  border: 2px solid #bb3fff;
   border-radius: 10px;
   padding: 10px;
   margin: 20px auto;
@@ -267,13 +319,13 @@ ul.skills {
 .footer {
   height: 130px;
   text-align: center;
-  background-color: #295975;
+  background-color: #153c72;
 }
 
 .footer-top {
   height: 10px;
   position: relative;
-  background-color: #224b62;
+  background-color: #11315c;
 }
 
 ul.icon-list {
@@ -301,6 +353,7 @@ ul.icon-list {
 .chart {
   margin: 30px 0 0;
 }
+
 .chart:first-child {
   margin: 0;
 }
@@ -312,44 +365,68 @@ ul.icon-list {
 .chart__bar {
   height: 30px;
   margin-bottom: 10px;
+  background: -webkit-gradient(linear, right top, left top, from(#4cb8c4), to(#3cd3ad));
   background: linear-gradient(to left, #4cb8c4, #3cd3ad);
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
   opacity: 0;
-  animation: 1s anim-lightspeed-in ease forwards;
+  -webkit-animation: 1s anim-lightspeed-in ease forwards;
+          animation: 1s anim-lightspeed-in ease forwards;
 }
+
 .chart--dev .chart__bar:nth-of-type(11) {
-  animation-delay: 2.7s;
+  -webkit-animation-delay: 2.7s;
+          animation-delay: 2.7s;
 }
+
 .chart--dev .chart__bar:nth-of-type(10) {
-  animation-delay: 2.5s;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
 }
+
 .chart--dev .chart__bar:nth-of-type(9) {
-  animation-delay: 2.3s;
+  -webkit-animation-delay: 2.3s;
+          animation-delay: 2.3s;
 }
+
 .chart--dev .chart__bar:nth-of-type(8) {
-  animation-delay: 2.1s;
+  -webkit-animation-delay: 2.1s;
+          animation-delay: 2.1s;
 }
+
 .chart--dev .chart__bar:nth-of-type(7) {
-  animation-delay: 1.9s;
+  -webkit-animation-delay: 1.9s;
+          animation-delay: 1.9s;
 }
+
 .chart--dev .chart__bar:nth-of-type(6) {
-  animation-delay: 1.7s;
+  -webkit-animation-delay: 1.7s;
+          animation-delay: 1.7s;
 }
+
 .chart--dev .chart__bar:nth-of-type(5) {
-  animation-delay: 1.5s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
 }
+
 .chart--dev .chart__bar:nth-of-type(4) {
-  animation-delay: 1.3s;
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
 }
+
 .chart--dev .chart__bar:nth-of-type(3) {
-  animation-delay: 1.1s;
+  -webkit-animation-delay: 1.1s;
+          animation-delay: 1.1s;
 }
+
 .chart--dev .chart__bar:nth-of-type(2) {
-  animation-delay: 0.9s;
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
 }
+
 .chart--dev .chart__bar:nth-of-type(1) {
-  animation-delay: 0.7s;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
 }
 
 .chart__label {
@@ -358,6 +435,7 @@ ul.icon-list {
   color: white;
   font-size: 10px;
 }
+
 @media (min-width: 768px) {
   .chart__label {
     font-size: 20px;
@@ -372,6 +450,7 @@ ul.icon-list {
   padding: 10px 20px;
   border-radius: 7px;
 }
+
 @media (min-width: 768px) {
   .contact-form {
     width: 60%;
@@ -384,16 +463,21 @@ ul.icon-list {
 
 .icon-list {
   list-style: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   margin-top: 20px;
 }
+
 .icon-list li {
   padding-left: 10px;
   padding-right: 10px;
 }
+
 .icon-list a {
-  color: #E33761;
+  color: #bb3fff;
   font-size: 2em;
+  -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 
@@ -402,30 +486,66 @@ ul.icon-list {
   opacity: 0.5;
 }
 
+.link {
+  color: #d192f3;
+  text-decoration: underline;
+}
+
+.link :visited,
+.link :hover :focus {
+  color: #bb3fff;
+}
+
 .mini-icon {
-  color: #E33761;
+  color: #bb3fff;
   font-size: 24px;
   padding-right: 10px;
 }
 
-@keyframes anim-lightspeed-in {
+@-webkit-keyframes anim-lightspeed-in {
   0% {
-    transform: translateX(-200%);
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%);
     opacity: 1;
   }
   100% {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
     opacity: 1;
   }
 }
-@keyframes pulse {
-  from {
-    color: #E9D7D0;
+
+@keyframes anim-lightspeed-in {
+  0% {
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%);
+    opacity: 1;
   }
-  to {
-    color: #E33761;
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
   }
 }
+
+@-webkit-keyframes pulse {
+  from {
+    color: #e9d7d0;
+  }
+  to {
+    color: #bb3fff;
+  }
+}
+
+@keyframes pulse {
+  from {
+    color: #e9d7d0;
+  }
+  to {
+    color: #bb3fff;
+  }
+}
+
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
@@ -434,6 +554,7 @@ ul.icon-list {
     opacity: 1;
   }
 }
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -442,9 +563,9 @@ ul.icon-list {
     opacity: 1;
   }
 }
+
 .fadeIn {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
 }
-
 /*# sourceMappingURL=style.css.map */

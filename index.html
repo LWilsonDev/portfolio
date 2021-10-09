@@ -25,11 +25,11 @@
       <div id='home' class='text-container'>
         <h1 class='intro-title'>Lucy Wilson</h1>
         <hr class='intro-hr'>
-        <h2 class='intro-subtitle'>Web Developer</h2>
+        <h2 class='intro-subtitle'>Web & Mobile Developer</h2>
       </div>
       <div class='scroll'>
         <p class='scroll-text'>Scroll</p>
-        <a class='chevron' href="#about"><i class="fas fa-chevron-down chev"></i></a>
+        <a aria-label="Scroll down" class='chevron' href="#about"><i class="fas fa-chevron-down chev"></i></a>
       </div>
     </div>
   </header>
@@ -49,10 +49,7 @@
             <a class="nav-link" href="#About">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#portfolio">Portfolio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="skills.html">Skills</a>
+            <a class="nav-link" href="#portfolio">Projects</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact</a>
@@ -65,26 +62,117 @@
     <div data-aos="fade-up" data-aos-duration="3000" class='section about'>
       <h2 class='section-title'>About</h2>
       <hr class='section-hr'>
-      <p class='lead intro-text'>I'm a web developer based in Glasgow. I'm a full stack developer, with a strong leaning
-        towards frontend development.
+      <p class='lead intro-text'>I am a full stack web and mobile developer specialising in React Native.
+      </p>
+      <p class='lead intro-text'>I am currently working as a Frontend Developer at Estendio, where I have a key role in
+        the creation and maintenance of our mobile application <a class="link" href="https://presentpal.co.uk/">Present
+          Pal</a> as
+        well as our accompanying software
+        for Chrome and Powerpoint built with React. Prior to this I was a software engineer at <a class="link"
+          href="https://salesagility.com/">Sales Agility</a> where I
+        worked on client projects based on the popular open-source SuiteCRM
       </p>
       <br>
-      <p class="lead"> A few of my experiments are showcased here...</p>
+      <p class="lead">Alongside my 'proper job' I like to build small side projects to explore different aspects of web
+        development. Most recently this has included building mini apps for React Native, focusing on some of the key
+        areas of animation and gesture handling. A few of my experiments for mobile and web are showcased here...</p>
     </div>
   </section>
   <section id='portfolio'>
     <div data-aos="fade-up" data-aos-duration="3000" class='section'>
-      <h2 class='section-title'>Portfolio</h2>
+      <h2 class='section-title'>Projects</h2>
       <hr class='section-hr'>
       <div class='img-container'>
-        <a href="https://the-beer-list-app.herokuapp.com/" target="_blank"><img class="project-img beer beer-img"
+        <img aria-label="NASA app on mobile" class="project-img mb-2" src="images/apod.png"></img>
+      </div>
+      <div class='section-text'>
+        <h3 class='section-subtitle mt-4 mb-4'>NASA App</h3>
+        <p class='body-text'>A React Native mobile app to show NASA's Astronomy Picture of the Day API. Users can search
+          for images by date, double-tap to zoom, single tap to view menu and reveal a draggable information tab. Users
+          can add their favourite images to
+          view again later. </p>
+        <div>
+          <a href="https://github.com/LWilsonDev/apod-app" target="_blank" class='project-btn'>View Code<i
+              class="fab fa-github"></i></a>
+        </div>
+        <ul class='skills'>
+          <li>React Native</li>
+          <li>Typescript</li>
+          <li>Reanimated 2</li>
+        </ul>
+      </div>
+      <hr class='section-hr'>
+    </div>
+
+    <div data-aos="fade-up" data-aos-duration="3000" class='section'>
+      <div class='img-container mb-4'>
+        <video width="240" height="320" controls>
+          <source src="images/kitchen.mp4" type="video/mp4">
+
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class='section-text'>
+        <h3 class='section-subtitle mb-4'>Kitchen Helper App</h3>
+        <p class='body-text'>This is a single-page mobile app exploring animation using the Lottie Library. Users can
+          enter an amount in weight and select which unit to convert it to. When the conversion starts, a playful
+          animation runs. I built the animation using Figma to tweak an existing SVG, and Haiku Animator to prepare the
+          Lottie animation.
+        </p>
+        <div>
+          <a href="https://github.com/LWilsonDev/kitchen-helper" target="_blank" class='project-btn'>View Code<i
+              class="fab fa-github"></i></a>
+        </div>
+        <ul class='skills'>
+          <li>React Native</li>
+          <li>Typescript</li>
+          <li>Animation</li>
+        </ul>
+      </div>
+      <hr class='section-hr'>
+    </div>
+    <div data-aos="fade-up" data-aos-duration="3000" class='section'>
+      <div class='img-container'>
+        <a aria-label="View Beethoven game" href="http://beethoven-music-memory.co.uk/" target="_blank"><img
+            aria-label="Beethoven game on iPad" class="project-img music" src="images/beethoven.png"></img></a>
+      </div>
+      <div class='section-text'>
+        <h3 class='section-subtitle mt-3 mb-4'>Beethoven Music Memory</h3>
+        <p class='body-text'>Having previously built a music memory game to help children learn to differentiate
+          between
+          musical pitches, I was approached by a music teacher in Germany to extend and adapt the game for his
+          students.
+          The goal was to celebrate the 250th year since Beethoven's birth by helping the students learn some of the
+          composer's most famous works.
+        </p>
+        <div>
+          <a href="https://github.com/LWilsonDev/beethoven-memory-game" target="_blank" class='project-btn'>View
+            Code<i class="fab fa-github"></i></a>
+          <a href="http://beethoven-music-memory.co.uk/" target="_blank" class='project-btn'>Play!<i
+              class="fas fa-laptop"></i></a>
+        </div>
+        <ul class='skills'>
+          <li>JQuery</li>
+          <li>SCSS</li>
+          <li>Javascript</li>
+          <li>Flexbox</li>
+        </ul>
+      </div>
+      <hr class='section-hr'>
+    </div>
+    <div data-aos="fade-up" data-aos-duration="3000" class='section'>
+      <div class='img-container'>
+        <a aria-label="View Beer List web app" href="https://the-beer-list-app.herokuapp.com/" target="_blank"><img
+            alt="Beer List Web app on desktop and mobile" class="project-img beer beer-img"
             src="images/beer.png"></img></a>
       </div>
       <div class='section-text'>
         <h3 class='section-subtitle mb-4'>The Beer List</h3>
-        <p class='body-text'>This is a Django app where users can log in securely, keep track of their favourite beers,
+        <p class='body-text'>This is a Django web app where users can log in securely, keep track of their favourite
+          beers,
           and browse other user's profiles for inspiration. With the growing trend for craft beer and independent
-          breweries, I wanted to create an app where users can review the beers they have tried, and keep track of their
+          breweries, I wanted to create an app where users can review the beers they have tried, and keep track of
+          their
           favourites.
         </p>
         <div>
@@ -96,20 +184,19 @@
         <ul class='skills'>
           <li>Python</li>
           <li>Django</li>
-          <li>PostgreSQL</li>
-          <li>AWS</li>
         </ul>
       </div>
     </div>
     <hr class='section-hr'>
     <div data-aos="fade-up" data-aos-duration="3000" class='section'>
       <div class='img-container'>
-        <a href="https://space-apis.herokuapp.com/" target="_blank"><img class="project-img sapce-img"
+        <a aria-label="View Space Project" href="https://space-apis.herokuapp.com/" target="_blank"><img
+            aria-label="Spave project on Desktop and mobile" class="project-img sapce-img"
             src="images/space.png"></img></a>
       </div>
       <div class='section-text'>
         <h3 class='section-subtitle mb-4'>Space API's</h3>
-        <p class='body-text'>This is the start of my exploration into NASA's API's.
+        <p class='body-text'>This was the start of my exploration into NASA's API's.
           This is a Django project built using Python, utilising AJAX to fetch real-time data about the International
           Space Station. You can find the current position of the ISS above the Earth, and see the location on Google
           Maps, as well as find out how many people are currently in space</p>
@@ -120,76 +207,26 @@
               class="fas fa-laptop"></i></a>
         </div>
         <ul class='skills'>
+          <li>Django</li>
           <li>API</li>
           <li>Python</li>
           <li>AJAX</li>
-          <li>AWS</li>
         </ul>
       </div>
     </div>
-    <hr class='section-hr'>
-    <div data-aos="fade-up" data-aos-duration="3000" class='section'>
-      <div class='img-container'>
-        <a href="http://beethoven-music-memory.co.uk/" target="_blank"><img class="project-img music"
-            src="images/beethoven.png"></img></a>
-      </div>
-      <div class='section-text'>
-        <h3 class='section-subtitle mt-3 mb-4'>Beethoven Music Memory</h3>
-        <p class='body-text'>Having previously built a music memory game to help children learn to differentiate between
-          musical pitches, I was approached by a music teacher in Germany to extend and adapt the game for his students.
-          The goal was to celebrate the 250th year since Beethoven's birth by helping the students learn some of the
-          composer's most famous works.
-        </p>
-        <div>
-          <a href="https://github.com/LWilsonDev/beethoven-memory-game" target="_blank" class='project-btn'>View Code<i
-              class="fab fa-github"></i></a>
-          <a href="http://beethoven-music-memory.co.uk/" target="_blank" class='project-btn'>Play!<i
-              class="fas fa-laptop"></i></a>
-        </div>
-        <ul class='skills'>
-          <li>JQuery</li>
-          <li>SCSS</li>
-          <li>Javascript</li>
-          <li>Flexbox</li>
-        </ul>
-      </div>
-    </div>
-    <hr class='section-hr'>
-    <div data-aos="fade-up" data-aos-duration="3000" class='section'>
-      <div class='img-container'>
-        <a href="http://vanlife-recipes.herokuapp.com/" target="_blank"><img class="project-img mb-2"
-            src="images/van.png"></img></a>
-      </div>
-      <div class='section-text'>
-        <h3 class='section-subtitle mt-4 mb-4'>Vanlife Recipe App</h3>
-        <p class='body-text'>A wanderlust themed recipe app, where users can login/register, add recipes, and view
-          recipes by category and author. Built using Python, Flask, MongoDB, and automated Unittests.</p>
-        <div>
-          <a href="https://github.com/LWilsonDev/recipe-book" target="_blank" class='project-btn'>View Code<i
-              class="fab fa-github"></i></a>
-          <a href="http://vanlife-recipes.herokuapp.com/" target="_blank" class='project-btn'>View Demo<i
-              class="fas fa-laptop"></i></a>
-        </div>
-        <ul class='skills'>
-          <li>Python</li>
-          <li>Flask</li>
-          <li>MongoDB</li>
-          <li>JQuery</li>
-        </ul>
-      </div>
-
   </section>
   <footer>
     <div class='footer'>
       <div class='footer-top'></div>
       <ul class='icon-list'>
-        <li><a href="https://www.linkedin.com/in/lucy-wilson-289437158/" target="_blank"><i
+        <li><a aria-label="LinkedIn" href="https://www.linkedin.com/in/lucy-wilson-289437158/" target="_blank"><i
               class="fab fa-linkedin"></i></a></li>
-        <li><a href="https://github.com/LWilsonDev" target="_blank"><i class="fab fa-github"></i></a></li>
-        <li><a href="contact.html"><i class="fas fa-envelope"></i></a></li>
+        <li><a aria-label="Github" href="https://github.com/LWilsonDev" target="_blank"><i
+              class="fab fa-github"></i></a></li>
+        <li><a aria-label="Contact" href="contact.html"><i class="fas fa-envelope"></i></a></li>
       </ul>
       <small>
-        <p class=''>Website by Lucy Wilson 2021</p>
+        <p class=''>Website by me</p>
       </small>
     </div>
   </footer>
@@ -209,19 +246,21 @@
   <script src="js/three.r95.min.js"></script>
   <script src="js/vanta.birds.min.js"></script>
   <script>
-    VANTA.BIRDS({
+    VANTA.NET({
       el: "#myCanvas",
       mouseControls: true,
       touchControls: true,
+      gyroControls: false,
       minHeight: 200.00,
       minWidth: 200.00,
       scale: 1.00,
       scaleMobile: 1.00,
-      backgroundColor: 0x142d3c,
-      birdSize: 1.20,
-      speedLimit: 4.00,
-      separation: 25.00,
-      quantity: 3.00
+      color: 0xbb3fff,
+      backgroundColor: 0x91a31,
+      points: 5.00,
+      maxDistance: 23.00,
+      spacing: 18.00,
+      showDots: false
     })
     AOS.init();
   </script>

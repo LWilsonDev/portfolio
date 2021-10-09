@@ -1,146 +1,138 @@
-
-@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic|Nanum+Myeongjo&display=swap');
-@import 'variables';
-@import 'mixins';
-
-
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,300;0,400;1,400&display=swap");
+@import "variables";
+@import "mixins";
 
 .myCanvas {
-  height:100vh;
+  height: 100vh;
   min-width: 100vw;
-  max-width:100vw;
+  max-width: 100vw;
 
   @extend %vertical-center;
-  padding:0px;
+  padding: 0px;
 }
 
-
-body{
-  background-color:#152e3c;
+body {
+  background-color: $background;
 }
 
 .body-text {
-font-size: $body-text;
+  font-size: $body-text;
 }
-  
 
 .hidden {
-  display:none;
+  display: none;
 }
 
-ul.chart--horiz{
+ul.chart--horiz {
   list-style: none;
   padding-left: 0px;
 }
 
 .intro-title {
-  font-size: $header;
+  font-size: $subtitle;
   letter-spacing: 2px;
   @include fade-in(1s, 5s);
+  @include desktop {
+    font-size: $header;
+  }
 }
 
 .intro-subtitle {
-  font-size: $subtitle;
+  font-size: $subtitle-small;
   letter-spacing: 1.5px;
   @include fade-in(2s, 5s);
+  @include desktop {
+    font-size: $subtitle;
+  }
 }
 
 .intro-hr {
   margin: 20px auto;
   @include fade-in(1.5s, 5s);
-  width: 300px;
-  height:2px;
-  background-color: white;
-}
-
-.section-hr{
   width: 200px;
-  height:2px;
-  background-color: $bright-pink;
-  margin:40px auto;
+  height: 2px;
+  background-color: white;
+  @include desktop {
+    width: 300px;
+  }
 }
 
+.section-hr {
+  width: 200px;
+  height: 2px;
+  background-color: $accent;
+  margin: 40px auto;
+}
 
-.text-container{
+.text-container {
   font-family: $feature-font;
-  color:$text;
-  z-index:5;
+  color: $text;
+  z-index: 5;
   @extend %center;
 }
 
-
 .chev {
-
   @extend %center;
   animation: pulse 1.5s infinite ease-in-out;
   animation-delay: 3s;
   display: block;
-  
+
   font-size: 24px;
   text-decoration: none;
   :active {
     text-decoration: none;
   }
   transform: translateY(50px);
-  position:relative;
+  position: relative;
   bottom: 30px;
-  :hover{
-    text-decoration:none;
+  :hover {
+    text-decoration: none;
   }
 }
 
 .chevron:hover {
-  
-    text-decoration:none;
-  
+  text-decoration: none;
+
   :active {
     text-decoration: none;
   }
 }
 
-
-
 .scroll {
-
-animation-delay: 3s;
-  animation-duration: 3s; 
-  -webkit-animation-duration: 3s;         
+  animation-delay: 3s;
+  animation-duration: 3s;
+  -webkit-animation-duration: 3s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   animation-name: fadeIn, pulse;
   @extend %center;
-  position:absolute;
-  bottom:60px;
-  p{
-  color:$text;
-  font-family: $feature-font;
+  position: absolute;
+  bottom: 60px;
+  p {
+    color: $text;
+    font-family: $feature-font;
   }
 }
 
 /*sticky header position*/
 .sticky.is-sticky {
-    position: fixed;
-    
-    top: 0;
-    z-index: 1000;
-    width: 100%;
+  position: fixed;
 
-    
+  top: 0;
+  z-index: 1000;
+  width: 100%;
 }
 
 .myNav {
-  background-color:#162f3ced;
+  background-color: $background;
   color: $text;
   font-family: $feature-font;
   font-size: 20px;
-   width: 100%;
-
+  width: 100%;
 }
 .nav-item {
   padding: 5px 20px;
 }
-
-
 
 /* Setting fade transition and default settings */
 body {
@@ -149,41 +141,37 @@ body {
   transition: background-color 1s ease;
 }
 
-
 .img-container {
-   @extend %center;
-   max-width: 100%;
- }
- 
+  @extend %center;
+  max-width: 100%;
+}
 
 .project-img {
   height: 200px;
   @include tablet {
     height: 400px;
   }
-  
+
   margin: 0px auto;
   max-width: 100%;
-  
 }
 
-ul.skills{
-  padding-left:0px;
+ul.skills {
+  padding-left: 0px;
 }
 
 .section {
-
   color: $text;
-  text-align:center;
-   font-family: $feature-font;
-   @include tablet {
-       width:80%;
-    }
-   @include desktop {
-      width:70%;
-    }
-   width:90%;
-   margin: 80px auto;
+  text-align: center;
+  font-family: $feature-font;
+  @include tablet {
+    width: 80%;
+  }
+  @include desktop {
+    width: 70%;
+  }
+  width: 90%;
+  margin: 80px auto;
 }
 
 .project-btn {
@@ -200,7 +188,7 @@ ul.skills{
   margin: 10px 20px 20px 20px;
   transition: all 0.5s ease-in-out;
   i {
-    padding-left:5px;
+    padding-left: 5px;
   }
 }
 
@@ -219,14 +207,12 @@ ul.skills{
   }
 }
 
-
 .project-btn:hover {
   background-color: darken($grey, 10%);
   cursor: pointer;
-  color:$text;
+  color: $text;
   text-decoration: none;
 }
-
 
 .message {
   display: none;
@@ -243,7 +229,7 @@ ul.skills{
 }
 
 .display {
-  display:inline-block;
+  display: inline-block;
   max-width: 80%;
   background-color: #3da1b9;
   border-radius: 10px;
@@ -252,10 +238,10 @@ ul.skills{
 }
 
 .display-error {
-  display:inline-block;
+  display: inline-block;
   max-width: 90%;
 
-  border: 2px solid $bright-pink;
+  border: 2px solid $accent;
   border-radius: 10px;
   padding: 10px;
   margin: 20px auto;
@@ -265,23 +251,21 @@ ul.skills{
   opacity: 0.6;
 }
 
-
 .footer {
   height: 130px;
   text-align: center;
-  background-color: lighten($background,15%);
+  background-color: lighten($background, 15%);
 }
 
 .footer-top {
   height: 10px;
   position: relative;
-  background-color: lighten($background,10%);
+  background-color: lighten($background, 10%);
 }
 
-ul.icon-list{
+ul.icon-list {
   padding-left: 0px;
 }
-
 
 //Demo https://speckyboy.com/code-snippets-css3-bar-graphs/
 .skills-div {
@@ -343,18 +327,15 @@ ul.icon-list{
   }
   width: 90%;
   margin: 60px auto;
-  background-color: lighten($text,20%);
+  background-color: lighten($text, 20%);
   color: black;
   padding: 10px 20px;
   border-radius: 7px;
-  
 }
-
 
 .mb {
-  margin-bottom:40px;
+  margin-bottom: 40px;
 }
-
 
 .icon-list {
   list-style: none;
@@ -364,10 +345,10 @@ ul.icon-list{
     padding-left: 10px;
     padding-right: 10px;
   }
-   a {
-    color: $bright-pink;
+  a {
+    color: $accent;
     font-size: 2em;
-    
+
     transition: all 0.5s ease-in-out;
   }
 }
@@ -377,14 +358,21 @@ ul.icon-list{
   opacity: 0.5;
 }
 
-.mini-icon {
-  color: $bright-pink;
-    font-size: 24px;
-    padding-right: 10px;
-   
+.link {
+  color: $accent-light;
+  text-decoration: underline;
+
+  :visited,
+  :hover :focus {
+    color: $accent;
+  }
 }
 
-
+.mini-icon {
+  color: $accent;
+  font-size: 24px;
+  padding-right: 10px;
+}
 
 //Keyframes
 @keyframes anim-lightspeed-in {
@@ -398,28 +386,34 @@ ul.icon-list{
   }
 }
 
-
 @keyframes pulse {
   from {
     color: $pink;
   }
   to {
-    color: $bright-pink;
+    color: $accent;
   }
 }
 
-
 @-webkit-keyframes fadeIn {
-            0% {opacity: 0;}
-            100% {opacity: 1;}
-         }
-         
-         @keyframes fadeIn {
-            0% {opacity: 0;}
-            100% {opacity: 1;}
-         }
-         
-         .fadeIn {
-            -webkit-animation-name: fadeIn;
-            animation-name: fadeIn;
-         }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
