@@ -36,6 +36,14 @@ body {
   display: none;
 }
 
+.back-link {
+  color: #bb3fff;
+}
+
+.back-link:hover {
+  color: #bb3fff;
+}
+
 ul.chart--horiz {
   list-style: none;
   padding-left: 0px;
@@ -319,13 +327,13 @@ ul.skills {
 .footer {
   height: 130px;
   text-align: center;
-  background-color: #153c72;
+  background-color: #11315c;
 }
 
 .footer-top {
   height: 10px;
   position: relative;
-  background-color: #11315c;
+  background-color: #0d2547;
 }
 
 ul.icon-list {

@@ -23,6 +23,13 @@ body {
   display: none;
 }
 
+.back-link {
+  color: $accent;
+}
+.back-link:hover {
+  color: $accent;
+}
+
 ul.chart--horiz {
   list-style: none;
   padding-left: 0px;
@@ -254,13 +261,13 @@ ul.skills {
 .footer {
   height: 130px;
   text-align: center;
-  background-color: lighten($background, 15%);
+  background-color: lighten($background, 10%);
 }
 
 .footer-top {
   height: 10px;
   position: relative;
-  background-color: lighten($background, 10%);
+  background-color: lighten($background, 5%);
 }
 
 ul.icon-list {
