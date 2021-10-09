@@ -16,7 +16,11 @@ body {
 }
 
 .body-text {
-  font-size: $body-text;
+  font-size: $body-text-smaller;
+  font-weight: 300;
+  @include tablet {
+    font-size: $body-text;
+  }
 }
 
 .hidden {
