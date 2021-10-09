@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,300;0,400;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@300;400&family=Raleway:wght@300;400&display=swap");
 .text-container, .chev, .scroll, .img-container {
   margin-left: auto;
   margin-right: auto;
@@ -123,7 +123,7 @@ ul.chart--horiz {
 }
 
 .text-container {
-  font-family: "Noto Sans Display", sans-serif;
+  font-family: "Raleway", sans-serif;
   color: #c9dae2;
   z-index: 5;
 }
@@ -173,7 +173,7 @@ ul.chart--horiz {
 
 .scroll p {
   color: #c9dae2;
-  font-family: "Noto Sans Display", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 /*sticky header position*/
@@ -187,7 +187,7 @@ ul.chart--horiz {
 .myNav {
   background-color: #091a31;
   color: #c9dae2;
-  font-family: "Noto Sans Display", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 20px;
   width: 100%;
 }
@@ -227,7 +227,7 @@ ul.skills {
 .section {
   color: #c9dae2;
   text-align: center;
-  font-family: "Noto Sans Display", sans-serif;
+  font-family: "Raleway", sans-serif;
   width: 90%;
   margin: 80px auto;
 }
